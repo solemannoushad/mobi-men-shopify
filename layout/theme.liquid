@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
     {{ 'tailwind-output.css' | asset_url | stylesheet_tag }}
+    {{ 'style.css' | asset_url | stylesheet_tag }}
+
     {{ content_for_header }}
 </head>
 <body>
+    {% section 'top-bar' %}
     {% section 'header' %}
-    {{ content_for_layout }}
+    <div class="main max-w-7xl mx-auto">
+        {{ content_for_layout }}
+    </div>
 </body>
 </html>

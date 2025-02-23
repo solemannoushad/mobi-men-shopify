@@ -1,1 +1,31 @@
-[]
+[
+    {
+        "name": "theme_info",
+        "theme_name": "Mobi Men",
+        "theme_version": "1.0.0",
+        "theme_author": "Soleman Noushad",
+        "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
+        "theme_support_url": "https://support.shopify.com/"
+      },
+      {
+        "name": "Store Settings",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "store_logo",
+                "label": "Logo"
+            }
+        ]
+      },
+      {
+        "name": "Typography",
+        "settings": [
+            {
+                "type": "font_picker",
+                "id": "store_font",
+                "label": "Store Font",
+                "default": "poppins_n4"
+            }
+        ]
+      }
+]
