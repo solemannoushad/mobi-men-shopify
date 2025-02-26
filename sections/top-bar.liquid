@@ -1,16 +1,45 @@
-<section>
-    <div></div>
+<section class="flex items-center justify-between p-2 md:p-4 border-b border-b-slate-200">
     <div>
-        Top Bar
+        <a href="/">
+            <i class="iconoir-facebook text-3xl md:text-3xl mr-[2px] md:mr-3 cursor-pointer"></i>
+        </a>
+        <a href="/">
+            <i class="iconoir-instagram text-3xl md:text-3xl mr-[2px] md:mr-3 cursor-pointer"></i>
+        </a>
     </div>
-    <div></div>
+    <div class="hidden md:block">
+        {% if settings.store_logo %}
+            <a href="{{ routes.root_url }}">
+              <img src="{{ settings.store_logo | image_url }}" alt="{{ shop.name }}" width="50" height="50" class="md:w-[80px]" loading="eager">
+            </a>
+        {% else %}
+            <a href="{{ routes.root_url }}">
+              {{ shop.name }}
+            </a>
+        {% endif %}
+    </div>
+    <div>
+        <button>
+            <i class="iconoir-search text-3xl md:text-3xl ml-[2px] md:ml-3 cursor-pointer"></i>
+        </button>
+        <button>
+            <i class="iconoir-user text-3xl md:text-3xl ml-[2px] md:ml-3 cursor-pointer"></i>
+        </button>
+        <button>
+            <i class="iconoir-shopping-bag text-3xl md:text-3xl ml-[2px] md:ml-3 cursor-pointer"></i>
+        </button>
+    </div>
 </section>
 
 {% schema %}
 {
     "name": "top-bar",
     "settings": [
-        
+            {
+                "type": "text",
+                "id": "store_name",
+                "label": "Store Name"
+            }
         ]
 }
 {% endschema %}

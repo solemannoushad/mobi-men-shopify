@@ -3,3 +3,7 @@
 body{
     font-family: 'Poppins', 'Montserrat', "Roboto Flex", 'sans-serif !important';
 }
+
+.category-item {
+    font-family: 'Montserrat';
+}

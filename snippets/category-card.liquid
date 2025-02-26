@@ -1,0 +1,10 @@
+<div class="group category-item my-[2rem] mx-3" {{ block.shopify_attributes }}>
+    <a href="{{ block.settings.category_url }}" class="flex flex-col items-center">
+        {% if block.settings.category_image != blank %}
+                <div class="image-wrapper w-[8rem] h-[8rem] rounded-full bg-[#e7e7e7] relative flex justify-center">
+                    <img src="{{ block.settings.category_image | image_url }}" alt="{{ block.settings.category_name }}" width="10" height="10" loading="lazy" class="w-[6.5rem] h-[6.5rem] object-contain absolute -top-[1.3rem] duration-300 ease-in-out group-hover:-top-[.5rem]">
+                </div>
+        {% endif %}
+        <h2 class="m-3 text-center font-medium">{{ block.settings.category_name }}</h2>
+    </a>
+</div>

@@ -1,4 +1,24 @@
 {
-    "sections": {},
-    "order": []
+    "sections": {
+        "banner": {
+            "type": "banner",
+            "name": "Banner",
+            "settings": {}
+        },
+        "categories-list": {
+            "type": "categories-list",
+            "name": "Categories List",
+            "settings": {}
+        },
+        "trust-badges": {
+            "type": "trust-badges",
+            "name": "Trust Badges",
+            "setting": {}
+        }
+    },
+    "order": [
+        "banner",
+        "categories-list",
+        "trust-badges"
+    ]
 }

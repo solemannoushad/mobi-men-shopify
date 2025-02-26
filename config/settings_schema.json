@@ -1,5 +1,5 @@
 [
-      {
+    {
         "name": "Store Settings",
         "settings": [
             {
@@ -17,7 +17,30 @@
                 "id": "store_font",
                 "label": "Store Font",
                 "default": "poppins_n4"
+            },
+            {
+                "type": "header",
+                "content": "Heading Typography"
+            },
+            {
+                "type": "number",
+                "id": "heading_font_size",
+                "label": "Font Size",
+                "default": 24,
+            },
+            {
+                "type": "font_picker",
+                "id": "heading_font_family",
+                "label": "Font Family",
+                "default": "poppins_n4"
+            },
+            {
+                "type": "text_alignment",
+                "id": "heading_text_alignment",
+                "label": "Alignment",
+                "default": "center"
             }
         ]
       }
-]
+  ]
+  

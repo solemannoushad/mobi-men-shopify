@@ -1,0 +1,52 @@
+<section class="p-8">
+    <h1 class="store_heading">Categories</h1>
+    <div class="grid my-8 flex-wrap justify-center items-center mx-[5rem]" style="grid-template-columns: repeat({{ section.settings.grid_column_number }}, 1fr); gap: {{ section.settings.grid_column_gap }}px;">
+        {% for block in section.blocks %}
+            {% render 'category-card', block: block %}
+        {% endfor %}
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "categories-list",
+    "settings": [
+        {
+            "type": "number",
+            "id": "grid_column_number",
+            "label": "Number of Columns",
+            "default": 1
+        },
+        {
+            "type": "number",
+            "id": "grid_column_gap",
+            "label": "Gap",
+            "default": 10
+        }
+    ],
+    "blocks": [
+        {
+            "type": "category",
+            "name": "Category Item",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "category_name",
+                    "label": "Category Name",
+                    "default": "Category"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "category_image",
+                    "label": "Category Image"
+                },
+                {
+                    "type": "url",
+                    "id": "category_url",
+                    "label": "Category URL"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

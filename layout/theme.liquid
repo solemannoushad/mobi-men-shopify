@@ -6,6 +6,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
     {{ 'tailwind-output.css' | asset_url | stylesheet_tag }}
+    <style>
+        .store_heading {
+            font-size: {{ settings.heading_font_size }}px;
+            font-family: "{{ settings.heading_font_family.family }}";
+            text-align: {{ settings.heading_text_alignment }};
+            text-transform: uppercase;
+        }
+    </style>
     {{ 'style.css' | asset_url | stylesheet_tag }}
 
     {{ content_for_header }}

@@ -1,0 +1,21 @@
+<section>
+    {% assign ss = section.settings %}
+    {% if ss.banner_image %}
+        <img src="{{ ss.banner_image | image_url }}" width="300" height="300" loading="eager" class="w-full h-full" alt="">
+    {% else %}
+    <img src="{{ 'p.png' | asset_url }}" width="300" height="300" loading="eager" class="w-full h-full" alt="">
+    {% endif %}
+</section>
+
+{% schema %}
+{
+    "name": "banner",
+    "settings": [
+            {
+                "type": "image_picker",
+                "id": "banner_image",
+                "label": "Banner Image"
+            }
+        ]
+}
+{% endschema %}
