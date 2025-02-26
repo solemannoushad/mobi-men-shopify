@@ -1,24 +1,55 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "banner": {
-            "type": "banner",
-            "name": "Banner",
-            "settings": {}
-        },
-        "categories-list": {
-            "type": "categories-list",
-            "name": "Categories List",
-            "settings": {}
-        },
-        "trust-badges": {
-            "type": "trust-badges",
-            "name": "Trust Badges",
-            "setting": {}
-        }
+  "sections": {
+    "banner": {
+      "type": "banner",
+      "settings": {}
     },
-    "order": [
-        "banner",
-        "categories-list",
-        "trust-badges"
-    ]
+    "categories-list": {
+      "type": "categories-list",
+      "blocks": {
+        "category_6FKVhE": {
+          "type": "category",
+          "settings": {
+            "category_name": "Mobiles",
+            "category_image": "shopify://shop_images/mobiles.png",
+            "category_url": ""
+          }
+        },
+        "category_7FA8K3": {
+          "type": "category",
+          "settings": {
+            "category_name": "Smart Watches",
+            "category_image": "shopify://shop_images/watches.png",
+            "category_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "category_6FKVhE",
+        "category_7FA8K3"
+      ],
+      "settings": {
+        "grid_column_number": 5,
+        "grid_column_gap": 0
+      }
+    },
+    "trust-badges": {
+      "type": "trust-badges",
+      "settings": {}
+    }
+  },
+  "order": [
+    "banner",
+    "categories-list",
+    "trust-badges"
+  ]
 }
