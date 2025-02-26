@@ -31,16 +31,91 @@
             "category_image": "shopify://shop_images/watches.png",
             "category_url": ""
           }
+        },
+        "category_yM6tmm": {
+          "type": "category",
+          "settings": {
+            "category_name": "Watch straps & cases",
+            "category_image": "shopify://shop_images/straps.png",
+            "category_url": ""
+          }
+        },
+        "category_JedCQj": {
+          "type": "category",
+          "settings": {
+            "category_name": "Wireless earbuds",
+            "category_image": "shopify://shop_images/wireless-earbuds.png",
+            "category_url": ""
+          }
+        },
+        "category_DQk9Wf": {
+          "type": "category",
+          "settings": {
+            "category_name": "Wireless Headphones",
+            "category_image": "shopify://shop_images/wireless-headphones.png",
+            "category_url": ""
+          }
+        },
+        "category_Uz88N4": {
+          "type": "category",
+          "settings": {
+            "category_name": "Wired Headphones",
+            "category_image": "shopify://shop_images/wired-headphones.png",
+            "category_url": ""
+          }
+        },
+        "category_MChmJ9": {
+          "type": "category",
+          "settings": {
+            "category_name": "Wired Earphones",
+            "category_image": "shopify://shop_images/wired-earphones.png",
+            "category_url": ""
+          }
+        },
+        "category_jTfUpV": {
+          "type": "category",
+          "settings": {
+            "category_name": "Mobile covers & protectors",
+            "category_image": "shopify://shop_images/mobile-covers.png",
+            "category_url": ""
+          }
+        },
+        "category_azBA3d": {
+          "type": "category",
+          "settings": {
+            "category_name": "Chargers",
+            "category_image": "shopify://shop_images/chargers.png",
+            "category_url": ""
+          }
+        },
+        "category_f6rG8D": {
+          "type": "category",
+          "settings": {
+            "category_name": "Cables",
+            "category_image": "shopify://shop_images/cables.png",
+            "category_url": ""
+          }
         }
       },
       "block_order": [
         "category_6FKVhE",
-        "category_7FA8K3"
+        "category_7FA8K3",
+        "category_yM6tmm",
+        "category_JedCQj",
+        "category_DQk9Wf",
+        "category_Uz88N4",
+        "category_MChmJ9",
+        "category_jTfUpV",
+        "category_azBA3d",
+        "category_f6rG8D"
       ],
       "settings": {
         "grid_column_number": 5,
         "grid_column_gap": 0
       }
+    },
+    "featured-collection": {
+      "type": "featured-collection"
     },
     "trust-badges": {
       "type": "trust-badges",
@@ -50,6 +125,7 @@
   "order": [
     "banner",
     "categories-list",
+    "featured-collection",
     "trust-badges"
   ]
 }

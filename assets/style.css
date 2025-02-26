@@ -7,3 +7,11 @@ body{
 .category-item {
     font-family: 'Montserrat';
 }
+
+.badge-icon {
+    transition: all .7s ease;
+}
+
+.trust-badge:hover .badge-icon {
+    transform: rotateY(360deg);
+}
