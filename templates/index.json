@@ -115,10 +115,54 @@
       }
     },
     "featured-collection": {
-      "type": "featured-collection"
+      "type": "featured-collection",
+      "settings": {}
     },
     "trust-badges": {
       "type": "trust-badges",
+      "settings": {}
+    },
+    "best-seller": {
+      "type": "best-seller",
+      "blocks": {
+        "best_seller_card_gkVYPN": {
+          "type": "best-seller-card",
+          "settings": {
+            "best_seller_title": "Smart Watches",
+            "best_seller_url": "shopify://collections/smart-watches"
+          }
+        },
+        "best_seller_card_c7RXzK": {
+          "type": "best-seller-card",
+          "settings": {
+            "best_seller_video": "shopify://files/videos/video7.mp4",
+            "best_seller_title": "Wireless Earbuds",
+            "best_seller_url": ""
+          }
+        },
+        "best_seller_card_6MKkMe": {
+          "type": "best-seller-card",
+          "settings": {
+            "best_seller_video": "shopify://files/videos/video3.mp4",
+            "best_seller_title": "Wireless Headphones",
+            "best_seller_url": ""
+          }
+        },
+        "best_seller_card_XtieUy": {
+          "type": "best-seller-card",
+          "settings": {
+            "best_seller_video": "shopify://files/videos/video6.mp4",
+            "best_seller_title": "Smart Phones",
+            "best_seller_url": "shopify://collections/smart-phones"
+          }
+        }
+      },
+      "block_order": [
+        "best_seller_card_gkVYPN",
+        "best_seller_card_c7RXzK",
+        "best_seller_card_6MKkMe",
+        "best_seller_card_XtieUy"
+      ],
       "settings": {}
     }
   },
@@ -126,6 +170,7 @@
     "banner",
     "categories-list",
     "featured-collection",
-    "trust-badges"
+    "trust-badges",
+    "best-seller"
   ]
 }

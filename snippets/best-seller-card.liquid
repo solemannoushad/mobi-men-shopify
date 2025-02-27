@@ -1,0 +1,11 @@
+<div class="best-seller-card-main mx-2" {{ block.shopify_attributes }}>
+    <a href="{{ block.settings.best_seller_url }}" class="block">
+        <div class="w-[20rem] h-[20rem] rounded-[1rem] overflow-hidden bg-black">
+            {{ block.settings.best_seller_video | video_tag: autoplay: false, loop: true, muted: true, controls: false, class: "w-full h-full object-cover hover-video" }}
+        </div>
+        <p class="best-seller-card-title text-center my-3 text-lg font-medium">
+            {{ block.settings.best_seller_title }}
+        </p>
+    </a>
+</div>
+

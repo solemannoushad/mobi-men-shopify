@@ -1,0 +1,41 @@
+<section class="section">
+    <h1 class="store_heading">Explore best seller</h1>
+    <div class="best-seller-cards flex overflow-x-scroll my-10">
+        {% for block in section.blocks %}
+            {% render 'best-seller-card', block: block %}
+        {% endfor %}
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "best-seller",
+    "settings": [
+
+        ],
+    "blocks": [
+        {
+            "type": "best-seller-card",
+            "name": "Best Seller Card",
+            "settings": [
+                {
+                    "type": "video",
+                    "id": "best_seller_video",
+                    "label": "Best Seller Video"
+                },
+                {
+                    "type": "text",
+                    "id": "best_seller_title",
+                    "label": "Best Seller Title",
+                    "default": "Best Seller Title"
+                },
+                {
+                    "type": "url",
+                    "id": "best_seller_url",
+                    "label": "Best Seller URL",
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}
