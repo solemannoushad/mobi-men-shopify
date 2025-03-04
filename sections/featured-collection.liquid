@@ -1,12 +1,27 @@
-<section>
-    <h1 class="store_heading">today's selection</h1>
+<section class="section">
+    <h1 class="store_heading">{{ section.settings.collection_title }}</h1>
+    <div class="featured-collection-products">
+        {% for product in section.settings.featured_collection.products %}
+            {% render 'product-card' product:product %}
+        {% endfor %}
+    </div>
 </section>
 
 {% schema %}
 {
     "name": "featured-collection",
     "settings": [
-        
+            {
+                "type": "text",
+                "id": "collection_title",
+                "label": "Collection Title",
+                "default": "Featured Collection"
+            },
+            {
+                "type": "collection",
+                "id": "featured_collection",
+                "label": "Featured Collection"
+            }
         ]
 }
 {% endschema %}

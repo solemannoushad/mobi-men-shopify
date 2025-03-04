@@ -128,6 +128,7 @@
         "best_seller_card_gkVYPN": {
           "type": "best-seller-card",
           "settings": {
+            "best_seller_video": "shopify://files/videos/video1.mp4",
             "best_seller_title": "Smart Watches",
             "best_seller_url": "shopify://collections/smart-watches"
           }

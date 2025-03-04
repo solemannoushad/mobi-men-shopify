@@ -1,0 +1,23 @@
+<div class="product-card w-[16rem] h-[23.25rem] bg-[#fafafa] border border-[#e7e7e7] rounded-[10px]">
+    <a href="{{ product.url }}">
+        {% comment %} Product Image {% endcomment %}
+        <div class="product-card-img h-[16.9rem] w-full">
+            {% if product.featured_image %}
+                {{ product.featured_image |  image_url: width: 200, height: 200, crop: 'center' | image_tag: class: 'w-full h-full object-cover' }}
+            {% endif %}
+        </div>
+        {% comment %} Product Card Details {% endcomment %}
+         <div class="details py-[1rem] px-[0.6rem]">
+             <div class="name-variant">
+                <h3 class="capitalize">{{ product.title }}</h3>
+                <div></div>
+             </div>
+             <div class="product-price">
+                 <span class="price font-semibold">{{ product.price | money }}</span>
+                 {% if product.compare_at_price %}
+                    <span>{{ product.compare_at_price | money }}</span>
+                 {% endif %}
+             </div>
+         </div>
+    </a>
+</div>
