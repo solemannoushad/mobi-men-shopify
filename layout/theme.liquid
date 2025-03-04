@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mobi Men</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
     {{ 'tailwind-output.css' | asset_url | stylesheet_tag }}
     {{ 'style.css' | asset_url | stylesheet_tag }}
@@ -25,5 +25,6 @@
     <div class="main max-w-7xl mx-auto">
         {{ content_for_layout }}
     </div>
+    {% section 'footer' %}
 </body>
 </html>

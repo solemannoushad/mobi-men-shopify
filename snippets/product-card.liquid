@@ -19,6 +19,7 @@
              <div class="name-variant mb-1 flex">
                 <h3 class="product-title capitalize text-lg leading-5 w-full">{{ product.title }}</h3>
                 <div class="flex">
+                    <div class="variants-main flex relaive">
                     {% for option in product.options_with_values %}
                         {% if option.name == "Color" %}
                             {% assign color_size = option.values.size %}
@@ -27,7 +28,7 @@
                                 {% if i == 2 %}
                                     {% break %}
                                 {% endif %}
-                                <div class="w-[1.1rem] h-[1.1rem] rounded-full -right-1.5 border border-[#e7e7e7]" style="background-color: {{ value.swatch.color }};"></div>
+                                <div class="w-[1.2rem] h-[1.2rem] rounded-full -ml-2 border-2 border-[#ececec]" style="background-color: {{ value.swatch.color }};"></div>
                                 {% assign i = i | plus: 1 %}
                             {% endfor %}
                         {% endif %}
@@ -35,6 +36,7 @@
                       {% if color_size > 2 %}
                         <span class="mx-1">+{{ color_size | minus: 2 }}</span>
                       {% endif %}
+                      </div>
                 </div>
              </div>
              <div class="product-price flex items-center">

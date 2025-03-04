@@ -6,6 +6,11 @@
                 "type": "image_picker",
                 "id": "store_logo",
                 "label": "Logo"
+            },
+            {
+                "type": "image_picker",
+                "id": "store_logo_footer",
+                "label": "Footer Logo"
             }
         ]
       },

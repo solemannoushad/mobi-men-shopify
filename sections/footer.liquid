@@ -1,0 +1,31 @@
+<section class="footer bg-black p-10 poppins">
+    <div class="footer-brand-info">
+        <div class="footer-logo">
+            {% if settings.store_logo %}
+                <a href="{{ routes.root_url }}">
+                  <img src="{{ settings.store_logo_footer | image_url }}" alt="{{ shop.name }}" width="50" height="50" class="md:w-[100px]" loading="eager">
+                </a>
+            {% else %}
+                <a href="{{ routes.root_url }}">
+                  {{ shop.name }}
+                </a>
+            {% endif %}
+        </div>
+        <div class="newsletter my-4">
+            <h2 class="text-white font-semibold my-6">Subscribe to our email alerts!</h2>
+            <form action="" class="inline-flex flex-col">
+                <input class="bg-white text-black p-2" type="email" placeholder="Enter your email address">
+                <input class="inline bg-transparent text-white border border-white p-2 cursor-pointer duration-300 hover:text-black hover:bg-white" type="submit" value="Subscribe">
+            </form>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "footer",
+    "settings": [
+
+        ]
+}
+{% endschema %}
