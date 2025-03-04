@@ -30,3 +30,17 @@ section.section {
     -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
     scrollbar-width: none; /* Hide scrollbar for Firefox */
 }
+
+
+.poppins {
+    font-family: 'Poppins';
+}
+
+.product-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word; /* Ensures proper breaking */
+}

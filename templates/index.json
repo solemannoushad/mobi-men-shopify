@@ -116,7 +116,10 @@
     },
     "featured-collection": {
       "type": "featured-collection",
-      "settings": {}
+      "settings": {
+        "collection_title": "today's selection",
+        "featured_collection": "smart-phones"
+      }
     },
     "trust-badges": {
       "type": "trust-badges",

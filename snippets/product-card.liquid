@@ -1,22 +1,48 @@
-<div class="product-card w-[16rem] h-[23.25rem] bg-[#fafafa] border border-[#e7e7e7] rounded-[10px]">
+
+{% if product.compare_at_price %}
+    {% if product.compare_at_price > product.price %}
+        {% assign discount = product.compare_at_price | minus: product.price %}
+        {% assign discount_percentage = discount | times: 100 | divided_by: product.compare_at_price %}
+      {% endif %}
+{% endif %}
+
+<div class="product-card w-[16rem] h-[23.25rem] bg-[#fafafa] border border-[#e7e7e7] rounded-[10px] m-2 overflow-hidden group">
     <a href="{{ product.url }}">
         {% comment %} Product Image {% endcomment %}
         <div class="product-card-img h-[16.9rem] w-full">
             {% if product.featured_image %}
-                {{ product.featured_image |  image_url: width: 200, height: 200, crop: 'center' | image_tag: class: 'w-full h-full object-cover' }}
+                {{ product.featured_image |  image_url: width: 200, height: 200, crop: 'center' | image_tag: class: 'w-full h-full object-cover group-hover:scale-104 duration-500 ease-in-out' }}
             {% endif %}
         </div>
         {% comment %} Product Card Details {% endcomment %}
          <div class="details py-[1rem] px-[0.6rem]">
-             <div class="name-variant">
-                <h3 class="capitalize">{{ product.title }}</h3>
-                <div></div>
+             <div class="name-variant mb-1 flex">
+                <h3 class="product-title capitalize text-lg leading-5 w-full">{{ product.title }}</h3>
+                <div class="flex">
+                    {% for option in product.options_with_values %}
+                        {% if option.name == "Color" %}
+                            {% assign color_size = option.values.size %}
+                            {% assign i = 0 %}
+                            {% for value in option.values %}
+                                {% if i == 2 %}
+                                    {% break %}
+                                {% endif %}
+                                <div class="w-[1.1rem] h-[1.1rem] rounded-full -right-1.5 border border-[#e7e7e7]" style="background-color: {{ value.swatch.color }};"></div>
+                                {% assign i = i | plus: 1 %}
+                            {% endfor %}
+                        {% endif %}
+                      {% endfor %}
+                      {% if color_size > 2 %}
+                        <span class="mx-1">+{{ color_size | minus: 2 }}</span>
+                      {% endif %}
+                </div>
              </div>
-             <div class="product-price">
-                 <span class="price font-semibold">{{ product.price | money }}</span>
+             <div class="product-price flex items-center">
+                 <span class="price font-semibold">{{ product.price | money_without_trailing_zeros }}</span>
                  {% if product.compare_at_price %}
-                    <span>{{ product.compare_at_price | money }}</span>
+                    <span class="text-[0.65rem] line-through mx-1">{{ product.compare_at_price | money_without_trailing_zeros }}</span>
                  {% endif %}
+                 <span class="text-[#12B985] font-semibold poppins">{{ discount_percentage }}% off</span>
              </div>
          </div>
     </a>
