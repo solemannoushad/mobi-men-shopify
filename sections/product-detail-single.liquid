@@ -1,0 +1,42 @@
+{{ product.title | escape_once }}
+
+{{ product.price | money }}
+
+
+
+{% if product.description %}
+    {{ product.description }}
+{% endif %}
+
+
+
+<form id="add-to-cart-form">
+  <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+  <input type="number" name="quantity" value="1" min="1">
+  <button type="submit">Add to Cart</button>
+</form>
+
+<script>
+  document.getElementById('add-to-cart-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    let formData = new FormData(this);
+
+    fetch('/cart/add.js', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+      alert('Product added to cart!');
+    })
+    .catch(error => console.error('Error:', error));
+  });
+</script>
+
+{% schema %}
+{
+    "name": "product-detail-single",
+    "settings": []
+}
+{% endschema %}

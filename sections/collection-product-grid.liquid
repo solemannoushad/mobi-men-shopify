@@ -1,1 +1,7 @@
-<h2>Products {{ collection.title }}</h2>
+<section>
+    <div class="collection-products flex flex-wrap my-10 justify-center">
+        {% for product in collection.products %}
+            {% render 'product-card', product: product %}
+        {% endfor %}
+    </div>
+</section>

@@ -21,7 +21,7 @@
           "settings": {
             "category_name": "Mobiles",
             "category_image": "shopify://shop_images/mobiles.png",
-            "category_url": ""
+            "category_url": "shopify://collections/smart-phones"
           }
         },
         "category_7FA8K3": {
@@ -29,7 +29,7 @@
           "settings": {
             "category_name": "Smart Watches",
             "category_image": "shopify://shop_images/watches.png",
-            "category_url": ""
+            "category_url": "shopify://collections/smart-watches"
           }
         },
         "category_yM6tmm": {
